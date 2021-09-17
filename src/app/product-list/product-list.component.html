@@ -1,9 +1,7 @@
 <div class="product-container">
-  <div class="product-index">
-    <div *ngFor ="let product of products">
-      <img src={{ product.url }}>
+    <div *ngFor ="let product of products" class="product-index">
+      <img src="{{ product.url }}">
       <h1>{{product.name}}</h1>
       <h3>{{product.price}}</h3>
     </div>
-  </div>
 </div>
