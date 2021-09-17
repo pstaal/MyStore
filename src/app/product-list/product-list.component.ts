@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as data from '../../../data.json';
+import { ProductsService } from '../services/products.service';
 
 type Product = {
   id: number,
@@ -18,10 +18,10 @@ export class ProductListComponent implements OnInit {
   
   products: Product[] = [];
 
-  constructor() { }
+  constructor(private productService: ProductsService) { }
 
   ngOnInit(): void {
-    this.products = data;
+    this.products = this.productService.getProducts();
   }
 
 }
