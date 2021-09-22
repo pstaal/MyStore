@@ -1,6 +1,6 @@
 <div class="product-container">
     <div *ngFor ="let product of products" class="product-index">
-      <img src="{{ product.url }}">
+      <a routerLink="product-item/{{ product.id }}"><img src="{{ product.url }}"></a>
       <div class="content">
       <h1>{{product.name}}</h1>
       <h3>${{product.price}}</h3>
