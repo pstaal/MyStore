@@ -1,0 +1,36 @@
+img {
+  border-radius: 10px;
+  width: 320px;
+}
+
+select,
+button {
+  width: 100px;
+  height: 2em;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 64px;
+}
+
+.detail-item {
+  margin-left: 128px;
+  margin-right: 128px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+a {
+  margin-top: 10px;
+  text-decoration: none;
+  color: cadetblue;
+}
