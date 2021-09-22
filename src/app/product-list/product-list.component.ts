@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../services/products.service';
 
-type Product = {
-  id: number,
-  name: string,
-  price: number,
-  url: string,
-  description: string
+export type Product = {
+  id?: number,
+  name?: string,
+  price?: number,
+  url?: string,
+  description?: string
 };
 
 @Component({
