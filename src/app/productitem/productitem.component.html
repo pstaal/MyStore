@@ -5,5 +5,5 @@
       <select [(ngModel)]="quantity" id="quantity" (ngModelChange)="onChange(quantity)">
         <option *ngFor="let quantity of quantities" [ngValue]="quantity">{{quantity}}</option>
     </select>
-      <button (click)="addItem()">Add to cart</button>
+      <button (click)="addItem(product.name, product.price, quantity)">Add to cart</button>
     </div>

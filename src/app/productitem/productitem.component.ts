@@ -19,8 +19,9 @@ export class ProductitemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addItem() {
-    
+  addItem(name: string, price: number, quantity: number) {
+    let cartitem = { name, price, quantity };
+    this.cartService.addItem(cartitem);
   }
 
   onChange(quantity: number) {
