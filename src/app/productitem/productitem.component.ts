@@ -23,7 +23,8 @@ export class ProductitemComponent implements OnInit {
     
   }
 
-  onChange(quantity) {
+  onChange(quantity: number) {
     this.quantity = quantity;
+  }
 
 }
