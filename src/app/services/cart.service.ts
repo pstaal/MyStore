@@ -26,6 +26,7 @@ export class CartService {
     } else {
     this.cart.push(item);
     alert('Added product to cart!')
+    console.log(this.cart);
     };
   }
 
