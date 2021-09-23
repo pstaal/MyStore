@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../services/products.service';
-import { CartService } from '../services/cart.service';
-import { CartItem } from '../services/cart.service';
+
 
 export type Product = {
   id?: number,
@@ -20,17 +19,10 @@ export class ProductListComponent implements OnInit {
   
   products: Product[] = [];
 
-  constructor(private productService: ProductsService, private cartService: CartService) { }
+  constructor(private productService: ProductsService) { }
 
   ngOnInit(): void {
     this.products = this.productService.getProducts();
   }
 
-  addItem() {
-   const item: CartItem = {
-     name:
-     price:
-     quantity:
-   }
-  }
 }
