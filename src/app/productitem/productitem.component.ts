@@ -18,11 +18,7 @@ export class ProductitemComponent implements OnInit {
   }
 
   addItem() {
-    const item: CartItem = {
-      name:
-      price:
-      quantity:
-    }
+    
    }
 
 }
