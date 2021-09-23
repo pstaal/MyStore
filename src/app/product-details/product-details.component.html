@@ -6,19 +6,10 @@
     <h1>{{product.name}}</h1>
     <p>$ {{product.price}}</p>
     <p> {{product.description }}</p>
-    <select id="quantity">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>
-    </select>
-    <button>Add to cart</button>
+    <select [(ngModel)]="quantity" id="quantity" (ngModelChange)="onChange(quantity)">
+      <option *ngFor="let quantity of quantities" [ngValue]="quantity">{{quantity}}</option>
+  </select>
+    <button (click)="addItem(product.name!, product.price!, quantity!)">Add to cart</button>
     <a routerLink="/"> &lt;- Back to product list</a>
   </div>
 </div>
