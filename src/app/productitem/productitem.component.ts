@@ -10,7 +10,7 @@ import { quantities } from '../quantities';
   styleUrls: ['./productitem.component.css']
 })
 export class ProductitemComponent implements OnInit {
-  @Input() product: Product
+  @Input() product: Product = {};
   quantities: number[] = quantities;
   quantity: number = quantities[0];
 
