@@ -3,7 +3,8 @@ import { Injectable } from '@angular/core';
 export type CartItem = {
   name?: string,
   price?: number,
-  quantity?: number
+  quantity?: number,
+  url?: string
 }
 
 @Injectable({

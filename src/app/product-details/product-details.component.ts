@@ -24,8 +24,8 @@ export class ProductDetailsComponent implements OnInit {
     this.product = products.find(product => product.id === id)!;
   }
 
-  addItem(name: string, price: number, quantity: number) {
-    let cartitem = { name, price, quantity };
+  addItem(name: string, price: number, quantity: number, url: string) {
+    let cartitem = { name, price, quantity, url };
     this.cartService.addItem(cartitem);
   }
 

@@ -9,7 +9,7 @@
     <select [(ngModel)]="quantity" id="quantity" (ngModelChange)="onChange(quantity)">
       <option *ngFor="let quantity of quantities" [ngValue]="quantity">{{quantity}}</option>
   </select>
-    <button (click)="addItem(product.name!, product.price!, quantity!)">Add to cart</button>
+    <button (click)="addItem(product.name!, product.price!, quantity!, product.url!)">Add to cart</button>
     <a routerLink="/"> &lt;- Back to product list</a>
   </div>
 </div>
