@@ -1,3 +1,12 @@
 <div class="main">
   <div class="empty-cart-message" *ngIf="cartitems.length === 0">Your cart is still empty!</div>
+  <div class="cart-container">
+  <div *ngFor ="let cartitem of cartitems" class="cart-item">
+    <div class="cart-item-details">
+       <p>{{cartitem.name}}</p>
+       <p>$ {{cartitem.price}}</p>
+       <p>Amount : </p>
+    </div>
+  </div>
+  </div>
 </div>
