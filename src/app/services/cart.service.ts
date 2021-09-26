@@ -26,6 +26,21 @@ export class CartService {
     };
   }
 
+  addOne(productName) {
+    let index = this.cart.findIndex(cartitem => cartitem.name === productName);
+    this.cart[index].quantity!++
+  }
+
+  removeOne(productName) {
+    let index = this.cart.findIndex(cartitem => cartitem.name === productName);
+    if (this.cart[index].quantity === 1) {
+      this.cart.splice(index, 1);
+      alert('Product removed from your cart!');
+    } else {
+      this.cart[index].quantity!--
+    }
+  }
+
   getItems() {
     return this.cart;
   }
