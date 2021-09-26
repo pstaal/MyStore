@@ -47,9 +47,10 @@ export class CartService {
   }
 
   calculateTotal() {
-    this.totalPrice = this.cart.reduce((sum, current) => {
+    let price = this.cart.reduce((sum, current) => {
       return sum + (current.price! * current.quantity!)
     }, 0);
+    this.totalPrice = Number(price.toFixed(2));
     return this.totalPrice;
   }
 
