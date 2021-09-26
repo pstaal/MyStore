@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../services/cart.service';
 import { CartItem } from '../services/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -14,7 +15,7 @@ export class CartComponent implements OnInit {
   address: string = '';
   creditcard!: number
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService, private router: Router) { }
 
   ngOnInit(): void {
     this.cartitems = this.cartService.getItems();
@@ -39,6 +40,7 @@ export class CartComponent implements OnInit {
       creditcard: this.creditcard
     }
     this.cartService.addUser(user);
+    this.router.navigate(['confirmation'])
   }
 
 }
