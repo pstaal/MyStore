@@ -14,6 +14,7 @@ export class CartService {
 
   cart: CartItem[] = [];
   totalPrice: number = 0;
+  user: object = {};
 
   constructor() { }
 
@@ -52,6 +53,10 @@ export class CartService {
     }, 0);
     this.totalPrice = Number(price.toFixed(2));
     return this.totalPrice;
+  }
+
+  addUser (user: object) {
+    this.user = user;
   }
 
 }
