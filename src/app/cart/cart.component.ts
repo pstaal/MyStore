@@ -15,4 +15,12 @@ export class CartComponent implements OnInit {
     this.cartitems = this.cartService.getItems();
   }
 
+  addOne(productName: string) {
+    this.cartService.addOne(productName);
+  }
+
+  rmoveOne(productName: string) {
+    this.cartService.removeOne(productName);
+  }
+
 }

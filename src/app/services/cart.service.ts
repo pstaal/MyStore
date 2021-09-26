@@ -22,7 +22,7 @@ export class CartService {
       this.cart[index].quantity = this.cart[index].quantity! + item.quantity!;
     } else {
     this.cart.push(item);
-    alert('Added product to cart!');
+    alert('Added product to your cart!');
     };
   }
 
@@ -35,7 +35,7 @@ export class CartService {
     let index = this.cart.findIndex(cartitem => cartitem.name === productName);
     if (this.cart[index].quantity === 1) {
       this.cart.splice(index, 1);
-      alert('Product removed from your cart!');
+      alert('Removed product from your cart!');
     } else {
       this.cart[index].quantity!--
     }

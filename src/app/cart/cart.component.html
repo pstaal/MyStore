@@ -7,7 +7,7 @@
     <div class="cart-item-details">
        <p>{{cartitem.name}}</p>
        <p>$ {{cartitem.price}}</p>
-       <p>Amount : <input value="cartitem.quantity"></p>
+       <p><button class="round" (click)="addOne(cartitem.name)">+</button>Amount : <input value="cartitem.quantity"><button class="round" (click)="removeOne(cartitem.name)">-</button></p>
     </div>
   </div>
   </div>
