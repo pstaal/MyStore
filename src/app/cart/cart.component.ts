@@ -19,7 +19,7 @@ export class CartComponent implements OnInit {
     this.cartService.addOne(productName);
   }
 
-  rmoveOne(productName: string) {
+  removeOne(productName: string) {
     this.cartService.removeOne(productName);
   }
 

@@ -26,12 +26,12 @@ export class CartService {
     };
   }
 
-  addOne(productName) {
+  addOne(productName: string) {
     let index = this.cart.findIndex(cartitem => cartitem.name === productName);
     this.cart[index].quantity!++
   }
 
-  removeOne(productName) {
+  removeOne(productName: string) {
     let index = this.cart.findIndex(cartitem => cartitem.name === productName);
     if (this.cart[index].quantity === 1) {
       this.cart.splice(index, 1);

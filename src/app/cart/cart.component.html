@@ -1,5 +1,5 @@
 <div class="main">
-  <div class="empty-cart-message" *ngIf="cartitems.length === 0">Your cart is still empty!</div>
+  <div class="empty-cart-message" *ngIf="cartitems.length === 0">Your cart is empty!</div>
   <div class="cart-container">
   <div class="cart-item-container">
     <div *ngFor ="let cartitem of cartitems" class="cart-item">
@@ -7,7 +7,7 @@
     <div class="cart-item-details">
        <p>{{cartitem.name}}</p>
        <p>$ {{cartitem.price}}</p>
-       <p><button class="round" (click)="addOne(cartitem.name)">+</button>Amount : <input value="cartitem.quantity"><button class="round" (click)="removeOne(cartitem.name)">-</button></p>
+       <div class="quantity"><button class="round" (click)="addOne(cartitem.name!)">+</button><input [(ngModel)]="cartitem.quantity"><button class="round" (click)="removeOne(cartitem.name!)">-</button></div>
     </div>
   </div>
   </div>
