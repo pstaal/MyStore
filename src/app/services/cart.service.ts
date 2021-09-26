@@ -7,6 +7,12 @@ export type CartItem = {
   url?: string
 }
 
+export type User = {
+  name?: string,
+  address?: string,
+  creditcard?: number,
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -14,7 +20,7 @@ export class CartService {
 
   cart: CartItem[] = [];
   totalPrice: number = 0;
-  user: object = {};
+  user: User= {};
 
   constructor() { }
 
@@ -57,6 +63,13 @@ export class CartService {
 
   addUser (user: object) {
     this.user = user;
+  }
+
+  getConformationDetails() {
+    return {
+      name: this.user.name,
+      totalPrice: this.totalPrice
+    }
   }
 
 }
