@@ -33,7 +33,13 @@ export class CartComponent implements OnInit {
   }
   
   submitForm() {
-    
+    let user = {
+      name: this.name,
+      address: this.address,
+      creditcard: this.creditcard
+    }
+    console.log(user);
+    this.cartService.addUser(user);
   }
 
 }
