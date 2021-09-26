@@ -7,17 +7,17 @@
     <div class="cart-item-details">
        <p>{{cartitem.name}}</p>
        <p>$ {{cartitem.price}}</p>
-       <div class="quantity"><button class="round" (click)="addOne(cartitem.name!)">+</button><input [(ngModel)]="cartitem.quantity"><button class="round" (click)="removeOne(cartitem.name!)">-</button></div>
+       <div class="quantity"><button class="square" (click)="addOne(cartitem.name!)">+</button><input class="small" [(ngModel)]="cartitem.quantity"><button class="square" (click)="removeOne(cartitem.name!)">-</button></div>
     </div>
   </div>
   <div *ngIf="totalPrice > 0" class="price">Total: {{totalPrice}}</div>
   </div>
     <form>
-      <h1>Full name</h1>
+      <h3>Full name</h3>
       <input type="text" name="fullname" placeholder="(minimum 3 characters)" [(ngModel)]="name">
-      <h1>Address</h1>
+      <h3>Address</h3>
       <input type="text" name="address" placeholder="(minimum 6 characters)" [(ngModel)]="address">
-      <h1>Credit card number</h1>
+      <h3>Credit card number</h3>
       <input type="text" name="address" placeholder="(16-digit-number)" [(ngModel)]="creditcard">
       <p>We'll never share your payment details with anyone else.</p>
       <button>Submit</button>
