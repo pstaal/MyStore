@@ -13,6 +13,7 @@ export type CartItem = {
 export class CartService {
 
   cart: CartItem[] = [];
+  totalPrice: number = 0;
 
   constructor() { }
 
@@ -43,6 +44,13 @@ export class CartService {
 
   getItems() {
     return this.cart;
+  }
+
+  calculateTotal() {
+    this.totalPrice = this.cart.reduce((sum, current) => {
+      return sum + (current.price! * current.quantity!)
+    }, 0);
+    return this.totalPrice;
   }
 
 }

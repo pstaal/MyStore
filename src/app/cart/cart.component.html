@@ -10,6 +10,7 @@
        <div class="quantity"><button class="round" (click)="addOne(cartitem.name!)">+</button><input [(ngModel)]="cartitem.quantity"><button class="round" (click)="removeOne(cartitem.name!)">-</button></div>
     </div>
   </div>
+  <p>Total: {{totalPrice}}</p>
   </div>
   </div>
 </div>
