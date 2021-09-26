@@ -19,15 +19,10 @@ export class CartService {
   addItem(item: CartItem) {
     if (this.cart.some(cartitem => cartitem.name === item.name)) {
       let index = this.cart.findIndex(cartitem => cartitem.name === item.name);
-      let object = this.cart.find(cartitem => cartitem.name === item.name)!;
-      this.cart.splice(index,1);
-      object.quantity = object.quantity! + item.quantity!;
-      this.cart.push(object);
-      alert('Added product to cart!')
+      this.cart[index].quantity = this.cart[index].quantity! + item.quantity!;
     } else {
     this.cart.push(item);
-    alert('Added product to cart!')
-    console.log(this.cart);
+    alert('Added product to cart!');
     };
   }
 
