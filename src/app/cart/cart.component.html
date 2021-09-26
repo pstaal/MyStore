@@ -12,15 +12,15 @@
   </div>
   <div *ngIf="totalPrice > 0" class="price">Total: {{totalPrice}}</div>
   </div>
-    <form *ngIf="cartitems.length > 0" (ngSubmit)="submitForm()">
+    <form #form="ngForm" *ngIf="cartitems.length > 0" (ngSubmit)="submitForm()">
       <h3>Full name</h3>
-      <input type="text" name="fullname" placeholder="(minimum 3 characters)" [(ngModel)]="name">
+      <input type="text" name="fullname" required minlength="3" placeholder="(minimum 3 characters)" [(ngModel)]="name">
       <h3>Address</h3>
-      <input type="text" name="address" placeholder="(minimum 6 characters)" [(ngModel)]="address">
+      <input type="text" name="address" required minlength="6" placeholder="(minimum 6 characters)" [(ngModel)]="address">
       <h3>Credit card number</h3>
-      <input type="text" name="address" placeholder="(16-digit-number)" [(ngModel)]="creditcard">
+      <input type="text" name="address" required minlength="16" placeholder="(16-digit-number)" [(ngModel)]="creditcard">
       <p>We'll never share your payment details with anyone else.</p>
-      <button type="submit">Submit</button>
+      <button [disabled]="form.invalid" type="submit">Submit</button>
     </form>
   </div>
 </div>

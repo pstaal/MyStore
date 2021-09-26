@@ -38,7 +38,6 @@ export class CartComponent implements OnInit {
       address: this.address,
       creditcard: this.creditcard
     }
-    console.log(user);
     this.cartService.addUser(user);
   }
 
