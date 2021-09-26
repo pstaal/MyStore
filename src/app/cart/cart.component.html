@@ -12,5 +12,15 @@
   </div>
   <div *ngIf="totalPrice > 0" class="price">Total: {{totalPrice}}</div>
   </div>
+    <form>
+      <h1>Full name</h1>
+      <input type="text" name="fullname" placeholder="(minimum 3 characters)" [(ngModel)]="title">
+      <h1>Address</h1>
+      <input type="text" name="address" placeholder="(minimum 6 characters)" [(ngModel)]="address">
+      <h1>Credit card number</h1>
+      <input type="text" name="address" placeholder="(16-digit-number)" [(ngModel)]="creditcard">
+      <p>We'll never share your payment details with anyone else.</p>
+      <button>Submit</button>
+    </form>
   </div>
 </div>

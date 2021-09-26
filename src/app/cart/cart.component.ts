@@ -10,6 +10,10 @@ import { CartItem } from '../services/cart.service';
 export class CartComponent implements OnInit {
   cartitems: CartItem[] = [];
   totalPrice: number = 0;
+  name: string = '';
+  address: string = '';
+  creditcard!: number
+  
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
