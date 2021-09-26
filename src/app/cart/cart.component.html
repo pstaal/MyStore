@@ -12,7 +12,7 @@
   </div>
   <div *ngIf="totalPrice > 0" class="price">Total: {{totalPrice}}</div>
   </div>
-    <form>
+    <form *ngIf="cartitems.length > 0">
       <h3>Full name</h3>
       <input type="text" name="fullname" placeholder="(minimum 3 characters)" [(ngModel)]="name">
       <h3>Address</h3>
