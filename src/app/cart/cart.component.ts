@@ -13,7 +13,7 @@ export class CartComponent implements OnInit {
   name: string = '';
   address: string = '';
   creditcard!: number
-  
+
   constructor(private cartService: CartService) { }
 
   ngOnInit(): void {
@@ -32,5 +32,8 @@ export class CartComponent implements OnInit {
     this.totalPrice = this.cartService.calculateTotal();
   }
   
+  submitForm() {
+    
+  }
 
 }
