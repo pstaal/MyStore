@@ -19,7 +19,7 @@ export class ProductDetailsComponent implements OnInit {
   constructor(private productService: ProductsService, private route: ActivatedRoute, private cartService: CartService) { }
 
   ngOnInit(): void {
-    let products 
+    let products;
     this.productService.getProducts().subscribe((data: Product[]) => {
     products = data;
     });;
