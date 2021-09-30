@@ -1,9 +1,8 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Product } from '../product-list/product-list.component';
 import { CartService } from '../services/cart.service';
 import { CartItem } from '../services/cart.service';
 import { quantities } from '../quantities';
-import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-productitem',
