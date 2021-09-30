@@ -1,4 +1,4 @@
 <div class="product-container">
-    <app-productitem *ngFor ="let product of products" class="product-index" [product]="product">
+    <app-productitem *ngFor ="let product of products" class="product-index" [product]="product" (addedProduct)="addedProduct($event)">
     </app-productitem>
 </div>

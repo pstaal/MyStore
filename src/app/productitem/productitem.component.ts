@@ -1,8 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
 import { Product } from '../product-list/product-list.component';
 import { CartService } from '../services/cart.service';
 import { CartItem } from '../services/cart.service';
 import { quantities } from '../quantities';
+import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-productitem',
@@ -11,6 +12,8 @@ import { quantities } from '../quantities';
 })
 export class ProductitemComponent implements OnInit {
   @Input() product: Product = {};
+  @Output() addedProduct = new EventEmitter();
+
   quantities: number[] = quantities;
   quantity: number = quantities[0];
 
@@ -21,8 +24,8 @@ export class ProductitemComponent implements OnInit {
 
   addItem(name: string, price: number, quantity: number, url: string) {
     let cartitem = { name, price, quantity, url };
-    this.cartService.addItem(cartitem);
-  }
+    this.addedProduct.emit(cartitem);
+ }
 
   onChange(quantity: number) {
     this.quantity = quantity;
