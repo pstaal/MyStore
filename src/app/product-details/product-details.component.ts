@@ -19,13 +19,14 @@ export class ProductDetailsComponent implements OnInit {
   constructor(private productService: ProductsService, private route: ActivatedRoute, private cartService: CartService) { }
 
   ngOnInit(): void {
-    let products;
+    let products : Product[] = [];
     this.productService.getProducts().subscribe((data: Product[]) => {
     products = data;
-    });;
     let id = parseInt(this.route.snapshot.params['id']);
-    this.product = products.find((product: { id: number; }) => product.id === id)!;
+    this.product = products.find(p => { return p.id === id})!;
+    });;
   }
+
 
   addItem(name: string, price: number, quantity: number, url: string) {
     let cartitem = { name, price, quantity, url };
