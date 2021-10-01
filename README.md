@@ -1,6 +1,6 @@
 # MyStore
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1. To use the app, download the files and run ng serve in your CLI. The app diplays a list of products that a user can add to his or her cart. When clicking on the product picture a detail page of the product is displayed. When a user fills out his or her personal details on the cart page and submits the order, a confirmation page is shown. The app is part of the udacity fullstack curriculum. 
 
 ## Development server
 
